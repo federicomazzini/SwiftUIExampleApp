@@ -10,29 +10,41 @@ import SwiftUI
 
 struct LaptopDetailView: View {
     
-    var viewModel: LaptopDetailViewModel
+    var viewModel: LaptopRowViewModel
+    var image: WebImage
     
     init(viewModel: LaptopRowViewModel) {
-        let vm = LaptopDetailViewModel(viewModel: viewModel)
-        self.viewModel = vm
+        self.viewModel = viewModel
+        self.image = WebImage(path: viewModel.urlString)
     }
     
     var body: some View {
-//        NavigationView {
-//            laptopSection
-//        }
-        Text("Hello")
+        VStack() {
+            Text(viewModel.title)
+                .font(Font.system(size: 25))
+                .fontWeight(.medium)
+            image
+                .frame(width: 200, height: 200, alignment: .center)
+                .padding(EdgeInsets(top: 12.0, leading: 18.0, bottom: 12.0, trailing: 18.0))
+            Text(viewModel.fullDescription)
+                .font(Font.system(size: 16))
+                .multilineTextAlignment(.leading)
+                .padding(EdgeInsets(top: 8.0, leading: 18.0, bottom: 25.0, trailing: 18.0))
+        }
     }
 }
 
-private extension LaptopDetailView {
-    
-//    var laptopSection: some View {
-//        Section {
-//            NavigationLink() {
-//                LaptopDetailRow(viewModel: LaptopDetailRowViewModel(item: viewModel.item))
-//            }
-//        }
-//    }
-    
+extension LaptopDetailView {
+    static func mockLaptop() -> LaptopDetailView {
+        var row = LaptopDetailView(viewModel: LaptopRowViewModel(item: LaptopResponse.mockItem))
+        row.image.placeholderImage = Constants.Assets.Images.defaultPreviewImage
+        
+        return row
+    }
+}
+
+public struct LaptopDetailView_Previews: PreviewProvider {
+    public static var previews: some View {
+        LaptopDetailView.mockLaptop()
+    }
 }

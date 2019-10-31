@@ -14,18 +14,24 @@ struct LaptopRow: View {
     
     init(viewModel: LaptopRowViewModel) {
         self.viewModel = viewModel
-        self.image = WebImage(path: viewModel.urlString)
+        self.image     = WebImage(path: viewModel.urlString)
     }
     
     var body: some View {
         HStack {
             image
+                .frame(width: 80, height: 80, alignment: .center)
             VStack() {
-                Text(viewModel.title).font(.subheadline)
-                    .padding(2)
-                Text(viewModel.fullDescription).font(.subheadline)
+                Text(viewModel.title)
+                    .font(.headline)
+                    .lineLimit(1)
                     .padding(4)
+                    .lineLimit(1)
+                    .frame(maxWidth: 200)
+                Text(viewModel.fullDescription)
+                    .font(.subheadline)
                     .lineLimit(3)
+                    .padding(4)
             }
         }
     }

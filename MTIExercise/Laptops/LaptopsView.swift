@@ -18,32 +18,40 @@ struct LaptopsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                if viewModel.dataSource.isEmpty {
-                    emptySection
-                } else {
-                    laptopSection
+            VStack {
+                List {
+                    if viewModel.dataSource.isEmpty {
+                        emptySection
+                    } else {
+                        laptopSection
+                    }
                 }
             }
+                
             .onAppear(perform: viewModel.fetchLaptops)
-            .navigationBarTitle("Laptops")
+            .navigationBarTitle(Constants.Strings.Laptops)
         }
     }
+    
 }
 
 private extension LaptopsView {
     
     var laptopSection: some View {
         Section {
-//            NavigationLink(destination: ) {
-                ForEach(viewModel.dataSource, content: LaptopRow.init(viewModel:))
-//            }
+            ForEach(viewModel.dataSource) { rowViewModel in
+                NavigationLink(destination: LaptopDetailView(viewModel: rowViewModel)) {
+                    LaptopRow.init(viewModel: rowViewModel)
+                }
+            }
+            
+            Spacer()
         }
     }
     
     var emptySection: some View {
         Section {
-            Text("No results")
+            Text(Constants.Strings.NoResults)
                 .foregroundColor(.gray)
         }
     }

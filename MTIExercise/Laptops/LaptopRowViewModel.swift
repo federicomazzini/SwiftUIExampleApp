@@ -11,9 +11,7 @@ import SwiftUI
 struct LaptopRowViewModel: Identifiable {
     private let item: LaptopResponse.Item
     
-    var id: String {
-        UUID().uuidString // This generates unique ids.
-    }
+    var id: String { title }
     
     var title: String { item.title }
     
@@ -24,8 +22,20 @@ struct LaptopRowViewModel: Identifiable {
     init(item: LaptopResponse.Item) {
         self.item = item
     }
+    
 }
 
 extension LaptopRowViewModel {
     static let mockViewModel = LaptopRowViewModel(item: LaptopResponse.mockItem)
+}
+
+// Used to hash on the title in order to produce a single view model for each title.
+extension LaptopRowViewModel: Hashable {
+  static func == (lhs: LaptopRowViewModel, rhs: LaptopRowViewModel) -> Bool {
+    return lhs.title == rhs.title
+  }
+
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(self.title)
+  }
 }

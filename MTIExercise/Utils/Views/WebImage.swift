@@ -22,7 +22,6 @@ struct WebImage : View {
         Image(uiImage: self.uiImage ?? placeholderImage)
             .resizable()
             .onAppear(perform: downloadWebImage)
-            .frame(width: 80, height: 80, alignment: .center)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.blue,lineWidth: 2).shadow(radius: 10))
             .aspectRatio(contentMode: .fill)
@@ -50,5 +49,6 @@ public struct WebImage_Previews: PreviewProvider {
         var myImage = WebImage(path: "")
         myImage.placeholderImage = Constants.Assets.Images.defaultPreviewImage
         return myImage
+            .frame(width: 120, height: 120, alignment: .center)
     }
 }

@@ -23,9 +23,6 @@
 		061E0D2C2368BE6F001CBA94 /* MTIExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0D2B2368BE6F001CBA94 /* MTIExerciseUITests.swift */; };
 		065B76762368F46F00AEE1C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B76752368F46F00AEE1C0 /* Constants.swift */; };
 		06615DDB236A937E00E202EC /* LaptopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06615DDA236A937E00E202EC /* LaptopDetailView.swift */; };
-		06615DDD236A93CF00E202EC /* LaptopDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06615DDC236A93CF00E202EC /* LaptopDetailViewModel.swift */; };
-		06615DDF236A984500E202EC /* LaptopDetailRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06615DDE236A984500E202EC /* LaptopDetailRowViewModel.swift */; };
-		06615DE1236A985300E202EC /* LaptopDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06615DE0236A985300E202EC /* LaptopDetailRow.swift */; };
 		06FCF63F23695D9C002FEF16 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCF63E23695D9C002FEF16 /* Parsing.swift */; };
 		06FCF6412369604D002FEF16 /* MTIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCF6402369604D002FEF16 /* MTIError.swift */; };
 		1505521FF3D5D35A626CF6CA /* Pods_MTIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317A80279AB0DF74B335B963 /* Pods_MTIExercise.framework */; };
@@ -73,9 +70,6 @@
 		061E0D2D2368BE6F001CBA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065B76752368F46F00AEE1C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		06615DDA236A937E00E202EC /* LaptopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopDetailView.swift; sourceTree = "<group>"; };
-		06615DDC236A93CF00E202EC /* LaptopDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopDetailViewModel.swift; sourceTree = "<group>"; };
-		06615DDE236A984500E202EC /* LaptopDetailRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopDetailRowViewModel.swift; sourceTree = "<group>"; };
-		06615DE0236A985300E202EC /* LaptopDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopDetailRow.swift; sourceTree = "<group>"; };
 		06FCF63E23695D9C002FEF16 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		06FCF6402369604D002FEF16 /* MTIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTIError.swift; sourceTree = "<group>"; };
 		23B557B51CA1B14F5B7BE86D /* Pods-MTIExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTIExercise.release.xcconfig"; path = "Target Support Files/Pods-MTIExercise/Pods-MTIExercise.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,9 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				06615DDA236A937E00E202EC /* LaptopDetailView.swift */,
-				06615DDC236A93CF00E202EC /* LaptopDetailViewModel.swift */,
-				06615DDE236A984500E202EC /* LaptopDetailRowViewModel.swift */,
-				06615DE0236A985300E202EC /* LaptopDetailRow.swift */,
 			);
 			path = "Laptop Detail";
 			sourceTree = "<group>";
@@ -499,14 +490,11 @@
 				061200C52368D5F000F508CD /* LaptopRow.swift in Sources */,
 				061200C92368DB9700F508CD /* LaptopsViewModel.swift in Sources */,
 				0617D6B82368F10600C6235C /* WebImage.swift in Sources */,
-				06615DDD236A93CF00E202EC /* LaptopDetailViewModel.swift in Sources */,
 				061E0D0A2368BE6E001CBA94 /* AppDelegate.swift in Sources */,
 				061A9C59236A3EA3000A82FE /* LaptopRowViewModel.swift in Sources */,
 				061A9C57236A34FE000A82FE /* Responses.swift in Sources */,
 				06FCF63F23695D9C002FEF16 /* Parsing.swift in Sources */,
 				06615DDB236A937E00E202EC /* LaptopDetailView.swift in Sources */,
-				06615DE1236A985300E202EC /* LaptopDetailRow.swift in Sources */,
-				06615DDF236A984500E202EC /* LaptopDetailRowViewModel.swift in Sources */,
 				061E0D0C2368BE6E001CBA94 /* SceneDelegate.swift in Sources */,
 				065B76762368F46F00AEE1C0 /* Constants.swift in Sources */,
 				061E0D0E2368BE6E001CBA94 /* LaptopsView.swift in Sources */,

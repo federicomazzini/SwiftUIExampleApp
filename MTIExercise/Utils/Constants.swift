@@ -10,6 +10,11 @@ import UIKit
     
 struct Constants {
     
+    struct Strings {
+        static let Laptops   = "Laptops"
+        static let NoResults = "No results"
+    }
+    
     struct Assets {
         
         struct Images {
