@@ -9,17 +9,17 @@
 import SwiftUI
 
 struct LaptopDetailView: View {
-    
+
     var viewModel: LaptopRowViewModel
     var image: WebImage
-    
+
     init(viewModel: LaptopRowViewModel) {
         self.viewModel = viewModel
         self.image = WebImage(path: viewModel.urlString)
     }
-    
+
     var body: some View {
-        VStack() {
+        VStack {
             Text(viewModel.title)
                 .font(Font.system(size: 25))
                 .fontWeight(.medium)
@@ -37,8 +37,8 @@ struct LaptopDetailView: View {
 extension LaptopDetailView {
     static func mockLaptop() -> LaptopDetailView {
         var row = LaptopDetailView(viewModel: LaptopRowViewModel(item: LaptopResponse.mockItem))
-        row.image.placeholderImage = Constants.Assets.Images.defaultPreviewImage
-        
+        row.image.placeholderImage = Constants.Images.defaultPreviewImage
+
         return row
     }
 }

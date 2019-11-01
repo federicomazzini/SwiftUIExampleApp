@@ -11,17 +11,17 @@ import SwiftUI
 struct LaptopRow: View {
     private let viewModel: LaptopRowViewModel
     var image: WebImage
-    
+
     init(viewModel: LaptopRowViewModel) {
         self.viewModel = viewModel
         self.image     = WebImage(path: viewModel.urlString)
     }
-    
+
     var body: some View {
         HStack {
             image
                 .frame(width: 80, height: 80, alignment: .center)
-            VStack() {
+            VStack {
                 Text(viewModel.title)
                     .font(.headline)
                     .lineLimit(1)
@@ -40,8 +40,8 @@ struct LaptopRow: View {
 extension LaptopRow {
     static func mockLaptopRow() -> LaptopRow {
         var row = LaptopRow(viewModel: LaptopRowViewModel(item: LaptopResponse.mockItem))
-        row.image.placeholderImage = Constants.Assets.Images.defaultPreviewImage
-        
+        row.image.placeholderImage = Constants.Images.defaultPreviewImage
+
         return row
     }
 }
@@ -49,7 +49,7 @@ extension LaptopRow {
 #if DEBUG
 public struct LaptopRow_Previews: PreviewProvider {
     public static var previews: some View {
-        
+
         // Display size categories
         ForEach(ContentSizeCategory.allCases, id: \.self) { sizeCategory in
             LaptopRow.mockLaptopRow()

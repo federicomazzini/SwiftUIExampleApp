@@ -10,20 +10,20 @@ import Foundation
 import Combine
 
 class LaptopsViewModel: ObservableObject, Identifiable {
-    
+
     @Published var dataSource: [LaptopRowViewModel] = []
     @Published var isLoading: Bool = true
-    
+
     private let laptopFetcher: LaptopFetchable
     private var disposables = Set<AnyCancellable>()
-    
+
     init(
         laptopFetcher: LaptopFetchable,
         scheduler: DispatchQueue = DispatchQueue(label: "LaptopViewModel")
     ) {
         self.laptopFetcher = laptopFetcher
     }
-    
+
     func fetchLaptops() {
         isLoading = true
         laptopFetcher.laptopList()
@@ -49,5 +49,5 @@ class LaptopsViewModel: ObservableObject, Identifiable {
         })
         .store(in: &disposables)
     }
-    
+
 }

@@ -7,21 +7,17 @@
 //
 
 import UIKit
-    
+
 struct Constants {
-    
+
     struct Strings {
         static let Laptops   = "Laptops"
         static let NoResults = "No results"
     }
-    
-    struct Assets {
-        
-        struct Images {
-            static let defaultPlaceHolder  = UIImage(named: "placeholder-round") ?? UIImage()
-            static let defaultPreviewImage = UIImage(named: "preview_Laptop") ?? UIImage()
-        }
-        
+
+    struct Images {
+        static let defaultPlaceHolder  = UIImage(named: "placeholder-round") ?? UIImage()
+        static let defaultPreviewImage = UIImage(named: "preview_Laptop") ?? UIImage()
     }
-    
+
 }

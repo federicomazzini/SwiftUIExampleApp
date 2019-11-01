@@ -7,7 +7,6 @@ target 'MTIExercise' do
 
   # Pods for MTIExercise
   pod 'SwiftLint', '~> 0.36.0'
-  pod 'MBProgressHUD', '~> 1.1.0'
 
   target 'MTIExerciseTests' do
     inherit! :search_paths

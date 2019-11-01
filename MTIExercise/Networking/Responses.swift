@@ -8,22 +8,22 @@
 
 import Foundation
 
+struct Item: Decodable {
+    let title: String
+    let laptopDescription: String
+    let imgUrlString: String?
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case laptopDescription = "description"
+        case imgUrlString      = "image"
+    }
+
+}
+
 struct LaptopResponse: Decodable {
     let list: [Item]
-    
-    struct Item: Decodable {
-        let title: String
-        let laptopDescription: String
-        let imgUrlString: String?
-        
-        enum CodingKeys: String, CodingKey {
-            case title
-            case laptopDescription = "description"
-            case imgUrlString      = "image"
-        }
-        
-    }
-    
+
     init(from decoder: Decoder) throws {
         /*
          The example endpoint's array has no key, otherwise this
@@ -31,21 +31,24 @@ struct LaptopResponse: Decodable {
          */
         var container = try decoder.unkeyedContainer()
         var items = [Item]()
-        
+
         while !container.isAtEnd {
             let item = try container.decode(Item.self)
             items.append(item)
         }
-        
+
         self.list = items
     }
-    
+
 }
 
 extension LaptopResponse {
     static let mockItem = Item(
         title: "Laptop 1",
-        laptopDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus varius sem, eu ultricies urna condimentum a. Suspendisse aliquam mi vel orci viverra consectetur. Morbi at diam neque. Nam commodo risus sit amet mi hendrerit, sed facilisis quam tincidunt.",
+        laptopDescription:
+            ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.Duis dapibus varius sem. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Duis dapibus varius sem. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Duis dapibus varius sem."].joined(),
         imgUrlString: ""
     )
 }

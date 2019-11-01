@@ -8,33 +8,33 @@
 
 import SwiftUI
 
-struct WebImage : View {
-    
-    @State private var uiImage: UIImage? = nil
-    var placeholderImage = Constants.Assets.Images.defaultPlaceHolder
+struct WebImage: View {
+
+    @State private var uiImage: UIImage?
+    var placeholderImage = Constants.Images.defaultPlaceHolder
     var path: String
-    
+
     init(path: String) {
         self.path = path
     }
-    
+
     var body: some View {
         Image(uiImage: self.uiImage ?? placeholderImage)
             .resizable()
             .onAppear(perform: downloadWebImage)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.blue,lineWidth: 2).shadow(radius: 10))
+            .overlay(Circle().stroke(Color.blue, lineWidth: 2).shadow(radius: 10))
             .aspectRatio(contentMode: .fill)
             .padding(2)
     }
-    
+
     func downloadWebImage() {
         guard let url = URL(string: path) else {
             print("WebImage: Invalid URL.")
             return
         }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data, let image = UIImage(data: data) {
                 self.uiImage = image
             } else {
@@ -48,7 +48,7 @@ struct WebImage : View {
 public struct WebImage_Previews: PreviewProvider {
     public static var previews: some View {
         var myImage = WebImage(path: "")
-        myImage.placeholderImage = Constants.Assets.Images.defaultPreviewImage
+        myImage.placeholderImage = Constants.Images.defaultPreviewImage
         return myImage
             .frame(width: 120, height: 120, alignment: .center)
     }

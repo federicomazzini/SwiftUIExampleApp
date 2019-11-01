@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ActivityIndicatorOverlay: View {
-    
+
     @State var spinCircle = false
-    
+
     var body: some View {
         ZStack {
             Circle()

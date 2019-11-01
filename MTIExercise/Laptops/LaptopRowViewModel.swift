@@ -9,20 +9,20 @@
 import Foundation
 
 struct LaptopRowViewModel: Identifiable {
-    private let item: LaptopResponse.Item
-    
+    private let item: Item
+
     var id: String { title }
-    
+
     var title: String { item.title }
-    
+
     var fullDescription: String { item.laptopDescription }
-    
+
     var urlString: String { item.imgUrlString ?? ""}
-    
-    init(item: LaptopResponse.Item) {
+
+    init(item: Item) {
         self.item = item
     }
-    
+
 }
 
 extension LaptopRowViewModel {

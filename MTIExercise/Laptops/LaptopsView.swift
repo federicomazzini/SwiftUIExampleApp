@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct LaptopsView: View {
-    
+
     @ObservedObject var viewModel: LaptopsViewModel
-    
+
     init(viewModel: LaptopsViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -28,21 +28,21 @@ struct LaptopsView: View {
                         } else {
                             laptopSection
                         }
-                        
+
                         Spacer()
                     }
                 }
             }
-                
+
             .onAppear(perform: viewModel.fetchLaptops)
             .navigationBarTitle(Constants.Strings.Laptops)
         }
     }
-    
+
 }
 
 private extension LaptopsView {
-    
+
     var laptopSection: some View {
         Section {
             ForEach(viewModel.dataSource) { rowViewModel in
@@ -52,12 +52,12 @@ private extension LaptopsView {
             }
         }
     }
-    
+
     var emptySection: some View {
         Section {
             Text(Constants.Strings.NoResults)
                 .foregroundColor(.gray)
         }
     }
-    
+
 }
