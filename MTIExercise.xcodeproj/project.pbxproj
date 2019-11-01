@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -178,7 +178,7 @@
 		061E0D082368BE6E001CBA94 /* MTIExercise */ = {
 			isa = PBXGroup;
 			children = (
-				06615DD9236A936400E202EC /* Laptop Detail */,
+				06615DD9236A936400E202EC /* LaptopDetail */,
 				061A9C5A236A43EF000A82FE /* Laptops */,
 				061A9C53236A33B1000A82FE /* Networking */,
 				061A9C5D236A4431000A82FE /* Utils */,
@@ -218,12 +218,12 @@
 			path = MTIExerciseUITests;
 			sourceTree = "<group>";
 		};
-		06615DD9236A936400E202EC /* Laptop Detail */ = {
+		06615DD9236A936400E202EC /* LaptopDetail */ = {
 			isa = PBXGroup;
 			children = (
 				06615DDA236A937E00E202EC /* LaptopDetailView.swift */,
 			);
-			path = "Laptop Detail";
+			path = LaptopDetail;
 			sourceTree = "<group>";
 		};
 		2F1F225353B7ACE364250960 /* Frameworks */ = {
@@ -660,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.federicomazzini.MTIExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -680,7 +680,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.federicomazzini.MTIExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

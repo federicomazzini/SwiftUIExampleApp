@@ -27,7 +27,15 @@ struct LaptopRow: View {
                     .lineLimit(1)
                     .padding(4)
                     .lineLimit(1)
-                    .frame(maxWidth: 200)
+                    .frame(
+                        minWidth: 220,
+                        idealWidth: 220,
+                        maxWidth: 220,
+                        minHeight: 28,
+                        idealHeight: 28,
+                        maxHeight: 28,
+                        alignment: .center
+                    )
                 Text(viewModel.fullDescription)
                     .font(.subheadline)
                     .lineLimit(3)

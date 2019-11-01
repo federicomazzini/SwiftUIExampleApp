@@ -19,24 +19,23 @@ struct LaptopsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.isLoading {
+                if self.viewModel.isLoading {
                     ActivityIndicatorOverlay()
                 } else {
                     List {
-                        if viewModel.dataSource.isEmpty {
-                            emptySection
+                        if self.viewModel.dataSource.isEmpty {
+                            self.emptySection
                         } else {
-                            laptopSection
+                            self.laptopSection
                         }
 
                         Spacer()
                     }
                 }
             }
-
-            .onAppear(perform: viewModel.fetchLaptops)
+            .onAppear(perform: self.viewModel.fetchLaptops)
             .navigationBarTitle(Constants.Strings.Laptops)
-        }
+        }.environment(\.horizontalSizeClass, .compact) // This makes device orientations redraw correctly.
     }
 
 }

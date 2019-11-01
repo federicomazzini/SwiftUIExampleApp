@@ -20,13 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
 
         // Create the SwiftUI view that provides the window contents.
-        let fetcher = LaptopFetcher()
-        let viewModel = LaptopsViewModel(laptopFetcher: fetcher)
+        let fetcher     = LaptopFetcher()
+        let viewModel   = LaptopsViewModel(laptopFetcher: fetcher)
         let laptopsView = LaptopsView(viewModel: viewModel)
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UIHostingController(rootView: laptopsView)
+
         window.makeKeyAndVisible()
         self.window = window
     }
