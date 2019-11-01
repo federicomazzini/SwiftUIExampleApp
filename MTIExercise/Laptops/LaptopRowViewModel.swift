@@ -6,7 +6,7 @@
 //  Copyright © 2019 federico mazzini. All rights reserved.
 //
 
-import SwiftUI
+import Foundation
 
 struct LaptopRowViewModel: Identifiable {
     private let item: LaptopResponse.Item

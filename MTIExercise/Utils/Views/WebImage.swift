@@ -44,6 +44,7 @@ struct WebImage : View {
     }
 }
 
+#if DEBUG
 public struct WebImage_Previews: PreviewProvider {
     public static var previews: some View {
         var myImage = WebImage(path: "")
@@ -52,3 +53,4 @@ public struct WebImage_Previews: PreviewProvider {
             .frame(width: 120, height: 120, alignment: .center)
     }
 }
+#endif

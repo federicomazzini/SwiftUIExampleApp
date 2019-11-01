@@ -19,11 +19,17 @@ struct LaptopsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    if viewModel.dataSource.isEmpty {
-                        emptySection
-                    } else {
-                        laptopSection
+                if viewModel.isLoading {
+                    ActivityIndicatorOverlay()
+                } else {
+                    List {
+                        if viewModel.dataSource.isEmpty {
+                            emptySection
+                        } else {
+                            laptopSection
+                        }
+                        
+                        Spacer()
                     }
                 }
             }
@@ -44,8 +50,6 @@ private extension LaptopsView {
                     LaptopRow.init(viewModel: rowViewModel)
                 }
             }
-            
-            Spacer()
         }
     }
     

@@ -46,6 +46,7 @@ extension LaptopRow {
     }
 }
 
+#if DEBUG
 public struct LaptopRow_Previews: PreviewProvider {
     public static var previews: some View {
         
@@ -58,3 +59,4 @@ public struct LaptopRow_Previews: PreviewProvider {
         }
     }
 }
+#endif

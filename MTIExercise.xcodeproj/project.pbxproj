@@ -23,6 +23,7 @@
 		061E0D2C2368BE6F001CBA94 /* MTIExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0D2B2368BE6F001CBA94 /* MTIExerciseUITests.swift */; };
 		065B76762368F46F00AEE1C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B76752368F46F00AEE1C0 /* Constants.swift */; };
 		06615DDB236A937E00E202EC /* LaptopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06615DDA236A937E00E202EC /* LaptopDetailView.swift */; };
+		06B507B6236B8082009BF87D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B507B5236B8082009BF87D /* ActivityIndicator.swift */; };
 		06FCF63F23695D9C002FEF16 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCF63E23695D9C002FEF16 /* Parsing.swift */; };
 		06FCF6412369604D002FEF16 /* MTIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FCF6402369604D002FEF16 /* MTIError.swift */; };
 		1505521FF3D5D35A626CF6CA /* Pods_MTIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317A80279AB0DF74B335B963 /* Pods_MTIExercise.framework */; };
@@ -70,6 +71,7 @@
 		061E0D2D2368BE6F001CBA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065B76752368F46F00AEE1C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		06615DDA236A937E00E202EC /* LaptopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopDetailView.swift; sourceTree = "<group>"; };
+		06B507B5236B8082009BF87D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		06FCF63E23695D9C002FEF16 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		06FCF6402369604D002FEF16 /* MTIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTIError.swift; sourceTree = "<group>"; };
 		23B557B51CA1B14F5B7BE86D /* Pods-MTIExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTIExercise.release.xcconfig"; path = "Target Support Files/Pods-MTIExercise/Pods-MTIExercise.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0617D6B72368F10600C6235C /* WebImage.swift */,
+				06B507B5236B8082009BF87D /* ActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				061A9C55236A3494000A82FE /* LaptopFetcher.swift in Sources */,
 				061200C52368D5F000F508CD /* LaptopRow.swift in Sources */,
 				061200C92368DB9700F508CD /* LaptopsViewModel.swift in Sources */,
+				06B507B6236B8082009BF87D /* ActivityIndicator.swift in Sources */,
 				0617D6B82368F10600C6235C /* WebImage.swift in Sources */,
 				061E0D0A2368BE6E001CBA94 /* AppDelegate.swift in Sources */,
 				061A9C59236A3EA3000A82FE /* LaptopRowViewModel.swift in Sources */,
